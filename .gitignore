@@ -1,0 +1,11 @@
+# Release binaries belong in GitHub Release assets, not in the Git history.
+*.exe
+*.zip
+*.msi
+*.msix
+*.pdb
+*.dll
+
+# Local release preparation files.
+*.local.*
+_staging/
