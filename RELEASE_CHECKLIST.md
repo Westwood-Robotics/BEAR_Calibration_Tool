@@ -6,6 +6,9 @@
       release commit and supported product/firmware profiles.
 - [ ] A clean Windows machine completed install, launch, calibration-simulator or
       approved hardware smoke test, upgrade, and uninstall validation.
+- [ ] For both G4 and F4 hardware, the initial Flash step performs no write. With
+      previous Flash disabled in manual mode, the zero image is written only
+      after **Next Step** and before the selected calibration stage begins.
 - [ ] The installer presents the correct EULA and separately offers Start Menu
       and desktop shortcuts named `BEAR Calibration`.
 - [ ] The Simplified Chinese installer page renders the complete Chinese EULA

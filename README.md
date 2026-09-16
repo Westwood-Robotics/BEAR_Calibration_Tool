@@ -16,6 +16,15 @@ Before running it, compare the file's SHA-256 value with the value published thr
 
 The installer lets you select the installation directory and separately choose whether to create `BEAR Calibration` shortcuts on the Windows Start Menu and desktop. Read and accept the displayed EULA and safety information before use. If the application is running when uninstall starts, the uninstaller asks before requesting a normal close and does not remove files until the process has exited.
 
+## Calibration data behavior
+
+Beginning with version 3.2, the initial Flash step is strictly read-only for all
+supported products and for both G4 and F4 firmware. If **Use Previous Flash Data**
+is selected and the existing data is valid, calibration uses it without an
+initial write. If a zero calibration image is required, it is prepared in memory
+and written only after the workflow advances into the selected calibration stage.
+In manual mode, no Flash write occurs before **Next Step** is selected.
+
 ## License, warranty, and responsibility
 
 The Software is proprietary and closed source. It is licensed free of charge for personal and commercial use with supported BEAR products, subject to the EULA supplied with the release. The license does not grant rights to redistribute, resell, sublicense, host, reverse engineer, or modify the Software except where applicable law expressly permits otherwise.
@@ -52,6 +61,13 @@ BEAR Calibration Tool 是 Westwood Robotics Corporation 面向受支持 BEAR 驱
 请仅从 Westwood Robotics 官网或[GitHub Releases](https://github.com/Westwood-Robotics/BEAR_Calibration_Tool/releases)等 Westwood Robotics 官方发布渠道下载安装程序。运行前，请将文件的 SHA-256与同一官方渠道公布的数值进行核对。请勿运行经第三方重新打包的安装程序。
 
 安装程序允许选择安装位置，并分别询问是否在 Windows 开始菜单和桌面创建名为`BEAR Calibration` 的快捷方式。使用前必须阅读并接受安装程序显示的 EULA 和安全说明。如果卸载时程序仍在运行，卸载程序会先询问是否关闭，并在确认进程已经退出后才删除文件。
+
+## 校准数据处理方式
+
+从 3.2 版本开始，所有受支持产品以及 G4、F4 固件的初始 Flash 步骤均严格
+只读。如果勾选“使用原 Flash 数据”且原数据有效，程序将直接使用该数据，不执行
+初始写入。如果需要使用零值校准镜像，程序会先在内存中准备该镜像，并仅在流程进入
+所选校准步骤后才写入。手动模式下，在用户点击“下一步”之前不会写入 Flash。
 
 ## 许可、保修与责任
 
