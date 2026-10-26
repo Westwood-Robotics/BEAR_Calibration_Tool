@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.3
+
+- Added per-actuator Friction Compensation calibration using paired forward and
+  reverse measurements at seven output speeds. The fitted parameters are
+  verified before Flash write, and friction compensation remains off afterward.
+- Added runtime product settings for the friction voltage check and velocity
+  controller. The calibration stops without writing its result when supply
+  voltage or attainable speed is insufficient.
+- Updated Torque Compensation to align bidirectional measurements by actual
+  rotor position and remove residual current mean before table quantization.
+- Added an optional detailed CSV export for calibration data through the
+  top-level `runtime.dat` `output` setting; the default remains summary output.
+- Improved Debug 3 telemetry synchronization, friction acquisition progress,
+  and handling of high-speed periodic residuals. Qualified high-speed ripple
+  produces a warning while retaining the baseline friction fit.
+
 ## 3.2
 
 - Made the initial Flash step strictly read-only for all supported products and

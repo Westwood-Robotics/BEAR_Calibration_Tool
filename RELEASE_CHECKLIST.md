@@ -1,5 +1,14 @@
 # Public release checklist
 
+- [x] Version 3.3 Windows x64 installer was rebuilt; native/core, workflow, GUI,
+      legal-document, and customer-package gates passed during packaging.
+- [ ] The 3.3 Release page uses the newly rebuilt installer and publishes its
+      exact SHA-256 value from `RELEASE_NOTES_3.3.md`.
+- [ ] On representative supported products, confirm Torque Compensation's
+      bidirectional acquisition and Friction Compensation's fit, warning,
+      readback, safe stop, and default-off behavior with the released installer.
+- [ ] Confirm the default report/plot output and optional `runtime.dat`
+      `output=1` CSV export in their expected results folders.
 - [x] EULA, safety, privacy, security, and translations are the approved release
       versions.
 - [ ] Automated tests and the hardware regression test passed for the exact

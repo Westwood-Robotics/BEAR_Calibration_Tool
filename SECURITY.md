@@ -7,6 +7,11 @@ behavior, observed behavior, and reproducible steps. Do not send secrets,
 personal data, or a complete device Flash image unless Westwood Robotics
 specifically requests it through a protected channel.
 
+Version 3.3 can export detailed calibration CSV files when the installed
+`runtime.dat` has `output` set to `1`. Review these optional diagnostic files
+before sharing them, and use a protected channel if Westwood Robotics requests
+them for investigation. The default setting does not export detailed CSV data.
+
 Westwood Robotics Corporation may review and respond to reports at its
 discretion. This channel does not create a promised response time, remediation
 deadline, support period, update schedule, or obligation to continue providing

@@ -11,12 +11,20 @@ BEAR Calibration Tool is the official Windows calibration utility for supported 
 ## Download and installation
 
 Download the installer only from an official Westwood Robotics distribution channel: the [company website](https://www.westwoodrobotics.io/) or the official [GitHub Releases](https://github.com/Westwood-Robotics/BEAR_Calibration_Tool/releases).
+See the [version 3.3 release notes](RELEASE_NOTES_3.3.md) for the current Windows x64 installer name and checksum.
 
 Before running it, compare the file's SHA-256 value with the value published through the same official channel. Do not run a repackaged or third-party installer.
 
 The installer lets you select the installation directory and separately choose whether to create `BEAR Calibration` shortcuts on the Windows Start Menu and desktop. Read and accept the displayed EULA and safety information before use. If the application is running when uninstall starts, the uninstaller asks before requesting a normal close and does not remove files until the process has exited.
 
 ## Calibration data behavior
+
+Version 3.3 adds Friction Compensation after Torque Compensation. It measures
+both directions at several steady speeds, fits parameters for the individual
+actuator, and verifies the result before writing the existing calibration Flash
+fields. Friction compensation remains off after calibration so the operator can
+enable and evaluate it separately. Torque Compensation now uses bidirectional
+measurements aligned to actual rotor position to reduce friction-related bias.
 
 Beginning with version 3.2, the initial Flash step is strictly read-only for all
 supported products and for both G4 and F4 firmware. If **Use Previous Flash Data**
@@ -37,7 +45,14 @@ To the maximum extent permitted by applicable law, the user is responsible for b
 
 Official publication and marketing of this release are limited to the United States and China. Technical availability through a globally accessible download channel does not represent active marketing, local support, legality, or suitability in every jurisdiction.
 
-Each calibration session saves one concise JSON report and, where applicable, summary plots. The report contains version, product, timestamps, step outcomes, old/new final summary values, quality metrics, and error codes. Raw and processed samples, complete coefficient sets, and complete torque tables are not exported.
+By default, each calibration session saves one concise JSON report and, where
+applicable, summary plots. The report contains version, product, timestamps,
+step outcomes, old/new final summary values, quality metrics, and error codes.
+Raw and processed samples are not exported by default. Authorized engineering
+personnel can set the top-level `output` value in the installed `runtime.dat` to
+`1` and restart the application to save detailed CSV data in that session's
+results folder. Treat those files as device diagnostic data and share them only
+when needed for support.
 
 ## Contact
 
@@ -59,10 +74,16 @@ BEAR Calibration Tool 是 Westwood Robotics Corporation 面向受支持 BEAR 驱
 ## 下载与安装
 
 请仅从 Westwood Robotics 官网或[GitHub Releases](https://github.com/Westwood-Robotics/BEAR_Calibration_Tool/releases)等 Westwood Robotics 官方发布渠道下载安装程序。运行前，请将文件的 SHA-256与同一官方渠道公布的数值进行核对。请勿运行经第三方重新打包的安装程序。
+当前 Windows x64 安装包名称和校验值见[3.3 版本说明](RELEASE_NOTES_3.3.md)。
 
 安装程序允许选择安装位置，并分别询问是否在 Windows 开始菜单和桌面创建名为`BEAR Calibration` 的快捷方式。使用前必须阅读并接受安装程序显示的 EULA 和安全说明。如果卸载时程序仍在运行，卸载程序会先询问是否关闭，并在确认进程已经退出后才删除文件。
 
 ## 校准数据处理方式
+
+3.3 版本在扭矩补偿后增加摩擦补偿校准。程序在多个稳定速度下分别采集正、反转数据，
+逐台拟合参数，验证通过后写入现有的校准 Flash 字段。校准结束后摩擦补偿仍保持关闭，
+可由操作人员另行开启并验证。扭矩补偿现在按实际转子位置对齐正反向测量数据，以降低
+摩擦带来的偏置。
 
 从 3.2 版本开始，所有受支持产品以及 G4、F4 固件的初始 Flash 步骤均严格
 只读。如果勾选“使用原 Flash 数据”且原数据有效，程序将直接使用该数据，不执行
@@ -81,7 +102,11 @@ BEAR Calibration Tool 是 Westwood Robotics Corporation 面向受支持 BEAR 驱
 
 本版本仅由 Westwood Robotics Corporation 在美国和中国正式发布及推广。通过全球可访问的下载渠道在其他地区获取本软件，并不代表在当地进行主动营销、提供本地支持，也不代表本软件在所有司法管辖区均合法或适用。
 
-每次校准仅保存一份精简 JSON 报告，并在适用时保存摘要图。报告包含程序版本、产品、时间、步骤结果、旧/新最终摘要值、质量指标和错误码；不导出原始或处理后采样、完整系数集合或完整扭矩补偿表。
+默认情况下，每次校准保存一份精简 JSON 报告，并在适用时保存摘要图。报告包含程序
+版本、产品、时间、步骤结果、旧/新最终摘要值、质量指标和错误码；默认不导出原始或
+处理后的采样数据。获授权的工程人员可将安装目录中 `runtime.dat` 顶层的 `output`
+设为 `1`，重启程序后，在该次校准的结果文件夹中保存详细 CSV。请将这些文件作为
+设备诊断数据管理，仅在需要技术支持时分享。
 
 ## 联系方式
 
