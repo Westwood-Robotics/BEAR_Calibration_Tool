@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.4
+
+- Improved calibration accuracy and reliability across supported products.
+- Improved compensation calibration and corrected known issues.
+
 ## 3.3
 
 - Added per-actuator Friction Compensation calibration using paired forward and

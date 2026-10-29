@@ -11,7 +11,7 @@ BEAR Calibration Tool is the official Windows calibration utility for supported 
 ## Download and installation
 
 Download the installer only from an official Westwood Robotics distribution channel: the [company website](https://www.westwoodrobotics.io/) or the official [GitHub Releases](https://github.com/Westwood-Robotics/BEAR_Calibration_Tool/releases).
-See the [version 3.3 release notes](RELEASE_NOTES_3.3.md) for the current Windows x64 installer name and checksum.
+See the [official GitHub Releases](https://github.com/Westwood-Robotics/BEAR_Calibration_Tool/releases) for the current Windows x64 installer and checksum.
 
 Before running it, compare the file's SHA-256 value with the value published through the same official channel. Do not run a repackaged or third-party installer.
 
@@ -19,7 +19,7 @@ The installer lets you select the installation directory and separately choose w
 
 ## Calibration data behavior
 
-Version 3.3 adds Friction Compensation after Torque Compensation. It measures
+Version 3.3 introduced Friction Compensation after Torque Compensation. It measures
 both directions at several steady speeds, fits parameters for the individual
 actuator, and verifies the result before writing the existing calibration Flash
 fields. Friction compensation remains off after calibration so the operator can
@@ -74,13 +74,13 @@ BEAR Calibration Tool 是 Westwood Robotics Corporation 面向受支持 BEAR 驱
 ## 下载与安装
 
 请仅从 Westwood Robotics 官网或[GitHub Releases](https://github.com/Westwood-Robotics/BEAR_Calibration_Tool/releases)等 Westwood Robotics 官方发布渠道下载安装程序。运行前，请将文件的 SHA-256与同一官方渠道公布的数值进行核对。请勿运行经第三方重新打包的安装程序。
-当前 Windows x64 安装包名称和校验值见[3.3 版本说明](RELEASE_NOTES_3.3.md)。
+当前 Windows x64 安装包名称和校验值见[官方 GitHub Releases 页面](https://github.com/Westwood-Robotics/BEAR_Calibration_Tool/releases)。
 
 安装程序允许选择安装位置，并分别询问是否在 Windows 开始菜单和桌面创建名为`BEAR Calibration` 的快捷方式。使用前必须阅读并接受安装程序显示的 EULA 和安全说明。如果卸载时程序仍在运行，卸载程序会先询问是否关闭，并在确认进程已经退出后才删除文件。
 
 ## 校准数据处理方式
 
-3.3 版本在扭矩补偿后增加摩擦补偿校准。程序在多个稳定速度下分别采集正、反转数据，
+3.3 版本起，程序在扭矩补偿后提供摩擦补偿校准。程序在多个稳定速度下分别采集正、反转数据，
 逐台拟合参数，验证通过后写入现有的校准 Flash 字段。校准结束后摩擦补偿仍保持关闭，
 可由操作人员另行开启并验证。扭矩补偿现在按实际转子位置对齐正反向测量数据，以降低
 摩擦带来的偏置。
