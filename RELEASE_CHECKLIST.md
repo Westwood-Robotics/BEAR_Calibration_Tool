@@ -1,8 +1,8 @@
 # Public release checklist
 
-- [x] Version 3.4 Windows x64 installer has passed native/core, workflow, GUI,
+- [x] Version 3.5 Windows x64 installer has passed native/core, workflow, GUI,
       legal-document, and customer-package gates during packaging.
-- [ ] The 3.4 Release page uses the verified installer and publishes its exact
+- [ ] The 3.5 Release page uses the verified installer and publishes its exact
       SHA-256 value.
 - [ ] On representative supported products, confirm Torque Compensation's
       bidirectional acquisition and Friction Compensation's fit, warning,

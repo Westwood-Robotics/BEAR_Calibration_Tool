@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.5
+
+- Improved calibration measurement accuracy and consistency across supported products.
+- Enhanced compensation calibration reliability and result handling.
+- Fixed known issues and improved diagnostic reporting.
+
 ## 3.4
 
 - Improved calibration accuracy and reliability across supported products.

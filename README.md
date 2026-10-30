@@ -19,6 +19,9 @@ The installer lets you select the installation directory and separately choose w
 
 ## Calibration data behavior
 
+Version 3.5 improves calibration accuracy, compensation calibration reliability,
+and handling of known issues across supported products.
+
 Version 3.3 introduced Friction Compensation after Torque Compensation. It measures
 both directions at several steady speeds, fits parameters for the individual
 actuator, and verifies the result before writing the existing calibration Flash
@@ -79,6 +82,8 @@ BEAR Calibration Tool 是 Westwood Robotics Corporation 面向受支持 BEAR 驱
 安装程序允许选择安装位置，并分别询问是否在 Windows 开始菜单和桌面创建名为`BEAR Calibration` 的快捷方式。使用前必须阅读并接受安装程序显示的 EULA 和安全说明。如果卸载时程序仍在运行，卸载程序会先询问是否关闭，并在确认进程已经退出后才删除文件。
 
 ## 校准数据处理方式
+
+3.5 版本提升了受支持产品的校准精度、补偿校准可靠性，并修复了已知问题。
 
 3.3 版本起，程序在扭矩补偿后提供摩擦补偿校准。程序在多个稳定速度下分别采集正、反转数据，
 逐台拟合参数，验证通过后写入现有的校准 Flash 字段。校准结束后摩擦补偿仍保持关闭，
